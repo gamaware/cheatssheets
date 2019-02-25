@@ -1,0 +1,102 @@
+CLASS DIAGRAMS : THE ESSENTIALS
+
+ dass diagram describes the types of objects in the System and the various
+kinds of static relationships that exist among them . Class diagrams also show
+the properties and operations of a Class and the constraints that apply to the
+way objects are connected . The UML uses the term feature as a general term
+that covers properties and operations of a Class 
+
+
+Properties represent structural features of a Class . As a first approximation, you
+can think of properties as corresponding to fields in a Class . The reality is rather
+involved, as we shall see, but that's a reasonable place to start
+.
+
+The attribute notation describes a property as a line of text within the dass box
+itself
+
+An association is a solid line between two classes, directed from the source
+dass to the target dass . The name of the property goes at the target end of the
+association, together with its multiplicity . The target end of the association
+links to the dass that is the type of the property .
+
+
+The multiplicity of a property is an indication of how many objects may fill the
+property 
+In attributes, you come across various terms that refer to the multiplicity .
+•
+Optional implies a lower bound of 0 .
+•
+Mandatory implies a lower bound of 1 or possibly more .
+•
+Single-valued implies an upper bound of 1 .
+•
+Multivalued implies an upper bound of more than 1 : usually '~ .
+
+
+Another common kind of association is a bidirectional association, such as----------
+A bidirectional association is a pair of properties that are linked together as
+inverses 
+
+In Figure 3 .4, the bidirectional nature of the association is made obvious by
+the navigability a_rrows at both ends of the association . Figure 3 .5 has no
+arrows ; the UML allows you to use this form either to indicate a bidirectional
+association or when you aren't showing navigability . My preference is to use
+the double-headed arrow of Figure 3 .4 when you want to make it clear that you
+have a bidirectional association .
+
+Operations are the actions that a dass knows to carry out . Operations most
+obviously correspond to the methods an a dass . Normally, you don't show
+those operations that simply manipulate properties, because they can usually be
+inferred 
+
+With conceptual models, you shouldn't use operations to specify the Inter-
+face of a class . Instead, use them to indicate the principal responsibilities of that
+class, perhaps using a couple of words summarizing a CRC responsibility
+
+ UML defines a query as an operation that gets a
+value from a dass without changing the system state-in other words, without
+side effects . You can mark such an Operation with the property string {query} . 1
+refer to operations that do change state as modifiers, also called commands .
+
+An operation is some-
+thing that is invoked an an object-the procedure
+declaration-whereas a
+method is the body of a procedure 
+
+
+A typical example of generalization involves the personal and corporate
+cus-
+tomers of a business . They have differences but also many similarities . The sim-
+ilarities can be placed in a general Customer class (the Supertype), with Personal
+Customer and Corporate Customer as subtypes .
+
+
+Notes are comments in the diagrams . Notes can stand an their own, or they can
+be linked with a dashed line to the elements they are commenting (Figure 3 .6) .
+They can appear in any kind of diagram
+
+
+ dependency exists between two elements if changes to the definition of one
+element (the supplier) may cause changes to the other (the client) . With classes,
+dependencies exist for various reasons : One class sends a message to another ;
+one class has another as part of its data ; one class mentions another as a param-
+eter to an operation . If a dass changes its interface, any message sent to that
+dass may no longer be valid .
+
+
+he UML allows you to depict dependencies between all sorts of elements .
+You use dependencies whenever you want to show how changes in one element
+might alter other elements 
+
+Class diagrams are the backbone of the UML, so you will find yourself using
+them all the time
+
+The biggest danger with class diagrams is that you can focus exclusively an
+structure and ignore behavior . Therefore, when drawing dass diagrams to
+understand software, always do them in conjunction with some form of behav-
+ioral technique . If you're going well, you'11 find yourself swapping between the
+techniques frequently 
+
+---
+Sequence Diagrams
