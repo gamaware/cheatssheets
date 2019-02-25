@@ -1,4 +1,4 @@
-0 – SHORTCUTS
+0 - SHORTCUTS
 Terminate a running command that's attached to your shell session (ctrl-c)
 Exit shell session (ctrl-d)
 Tab Completion
@@ -8,7 +8,7 @@ Move to beginning or end of line (ctrl-a, ctrl-e)
 Move forward or back one word (alt-f, alt-b)
 Searching through shell history (ctrl-r)﻿
 -------------------------------------------------------
-1 – SYSTEM INFORMATION
+1 - SYSTEM INFORMATION
 # Show the history of commands 
 history 
 
@@ -50,7 +50,7 @@ w
 # Who you are logged in as
 whoami
 -------------------------------------------------------
-2 – HARDWARE INFORMATION
+2 - HARDWARE INFORMATION
 # Display messages in kernel ring buffer
 dmesg
 
@@ -81,7 +81,7 @@ hdparm -tT /dev/sda
 # Test for unreadable blocks on disk sda
 badblocks -s /dev/sda
 -------------------------------------------------------
-3 – PERFORMANCE MONITORING AND STATISTICS
+3 - PERFORMANCE MONITORING AND STATISTICS
 # Display and manage the top processes
 top
 
@@ -118,7 +118,7 @@ free -h
 # Execute "df -h", showing periodic updates
 watch df -h
 -------------------------------------------------------
-4 – USER INFORMATION AND MANAGEMENT
+4 - USER INFORMATION AND MANAGEMENT
 # Display the user and group ids of your current user.
 id
 
@@ -143,7 +143,7 @@ userdel john
 # Add the john account to the sales group
 usermod -aG sales john
 -------------------------------------------------------
-5 – FILE AND DIRECTORY COMMANDS
+5 - FILE AND DIRECTORY COMMANDS
 # List all files in a long listing (detailed) format
 ls -al
 
@@ -152,6 +152,12 @@ pwd
 
 # Create a directory
 mkdir directory
+
+# 10 directories from directory1 through ddirectory10
+mkdir directory{1..10} 
+
+same but each of the directories will hold 50 times sax1 through sax50 (-p will create parent directories if they do not exist.
+mkdir -p sa{1..50}/sax{1..50}
 
 # Remove (delete) file
 rm file
@@ -195,7 +201,7 @@ tail file
 # Display the last 10 lines of file and "follow" the file as it grows.
 tail -f file
 -------------------------------------------------------
-6 – PROCESS MANAGEMENT
+6 - PROCESS MANAGEMENT
 # Display your currently running processes
 ps
 
@@ -229,7 +235,7 @@ fg
 # Brings job n to the foreground
 fg n
 -------------------------------------------------------
-7 – FILE PERMISSIONS
+7 - FILE PERMISSIONS
 Linux chmod example
         PERMISSION      EXAMPLE
 
@@ -252,7 +258,7 @@ Linux chmod example
         x = execute
         - = no access
 -------------------------------------------------------
-8 – NETWORKING
+8 - NETWORKING
 # Display all network interfaces and ip address
 ifconfig -a
 
@@ -289,7 +295,7 @@ wget http://domain.com/file
 # Display listening tcp and udp ports and corresponding programs
 netstat -tupln
 ------------------------------------------------------- 
-9 – ARCHIVES (TAR FILES)
+9 - ARCHIVES (TAR FILES)
 # Create tar named archive.tar containing directory.
 tar cf archive.tar directory
 
@@ -308,7 +314,7 @@ tar cjf archive.tar.bz2 directory
 # Extract a bzip2 compressed tar file.
 tar xjf archive.tar.bz2
 -------------------------------------------------------
-10 – INSTALLING PACKAGES
+10 - INSTALLING PACKAGES
 # Search for a package by keyword.
 yum search keyword
 
@@ -331,7 +337,7 @@ cd sourcecode
 make
 make install
 -------------------------------------------------------
-11 – SEARCH
+11 - SEARCH
 # Search for pattern in file
 grep pattern file
 
@@ -347,7 +353,7 @@ find /home/john -name 'prefix*'
 # Find files larger than 100MB in /home
 find /home -size +100M
 -------------------------------------------------------
-12 – SSH LOGINS
+12 - SSH LOGINS
 # Connect to host as your local username.
 ssh host
 
@@ -357,7 +363,7 @@ ssh user@host
 # Connect to host using port
 ssh -p port user@host
 -------------------------------------------------------
-13 – FILE TRANSFERS
+13 - FILE TRANSFERS
 # Secure copy file.txt to the /tmp folder on server
 scp file.txt server:/tmp
 
@@ -373,7 +379,7 @@ rsync -a /home /backups/
 # Synchronize files/directories between the local and remote system with compression enabled
 rsync -avz /home server:/backups/
 -------------------------------------------------------
-14 – DISK USAGE
+14 - DISK USAGE
 # Show all  available or the specified block devices
 lsblk -a
 
@@ -392,7 +398,7 @@ du -ah
 # Display total disk usage off the current directory
 du -sh
 -------------------------------------------------------
-15 – DIRECTORY NAVIGATION
+15 - DIRECTORY NAVIGATION
 # To go up one level of the directory tree.  (Change into the parent directory.)
 cd ..
 
