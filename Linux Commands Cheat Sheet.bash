@@ -1,3 +1,4 @@
+0 – SHORTCUTS
 Terminate a running command that's attached to your shell session (ctrl-c)
 Exit shell session (ctrl-d)
 Tab Completion
@@ -8,6 +9,9 @@ Move forward or back one word (alt-f, alt-b)
 Searching through shell history (ctrl-r)﻿
 -------------------------------------------------------
 1 – SYSTEM INFORMATION
+# Show the history of commands 
+history 
+
 # Display Linux system information
 uname -a
 
@@ -16,6 +20,11 @@ uname -r
 
 # Show which version of redhat installed
 cat /etc/redhat-release
+
+# Show which version of Linux
+cat /etc/*release
+lsb_release -a
+hostnamectl
 
 # Show how long the system has been running + load
 uptime
@@ -278,7 +287,7 @@ hostname -I
 wget http://domain.com/file
 
 # Display listening tcp and udp ports and corresponding programs
-netstat -nutlp
+netstat -tupln
 ------------------------------------------------------- 
 9 – ARCHIVES (TAR FILES)
 # Create tar named archive.tar containing directory.
@@ -365,6 +374,9 @@ rsync -a /home /backups/
 rsync -avz /home server:/backups/
 -------------------------------------------------------
 14 – DISK USAGE
+# Show all  available or the specified block devices
+lsblk -a
+
 # Show free and used space on mounted filesystems
 df -h
 
