@@ -1,0 +1,9 @@
+1. Oracle DB
+2. Linux
+3. Python
+4. Vim
+5. DevOps
+6. AWS
+7. Docker
+8. Ethical Hacking
+9. AI

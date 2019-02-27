@@ -1,0 +1,2 @@
+- Configure SFTP Directory Tree
+- Check how to enable VIM Colors for Python
